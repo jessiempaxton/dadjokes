@@ -15,9 +15,12 @@
         }
       }
     },
+    mounted() {
+      this.$store.dispatch('getJoke')
+    },
     computed: {
       joke() {
-        return this.$store.state.joke;
+        return this.$store.state.joke.joke;
       },
     },
     methods: {},
